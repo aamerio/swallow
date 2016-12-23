@@ -7,3 +7,9 @@ def redis_port():
     container_id, redis_port = start_redis_container(docker_client) 
     yield redis_port
     docker_client.remove_container(container_id, force=True)
+
+@pytest.fixture(scope='function')
+def our_service(our_service_session, ext_service_impostor):
+    return our_service
+
+    
