@@ -1,7 +1,5 @@
 # encoding: utf-8
 # pylint: disable=missing-docstring
-import docker
-import pytest
 
 @pytest.yield_fixture(scope='session') 
 def redis_port():
