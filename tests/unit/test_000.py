@@ -1,7 +1,6 @@
-import json
-import os
-import pytest
+# encoding: utf-8
+# pylint: disable=missing-docstring
 
 def test_first():
-    a = 1
-    assert a == 1
+    first = 1
+    assert first == 1
