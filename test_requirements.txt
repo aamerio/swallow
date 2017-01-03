@@ -1,7 +1,7 @@
-pytest
-pytest-bdd
-mock
-swagger_spec_validator
+pytest==3.0.5
+pytest-bdd==2.18.1
+mock==2.0.0
+swagger_spec_validator==2.0.3
 
 ## Optional packages
 # pytest-xdist
