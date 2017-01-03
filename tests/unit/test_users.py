@@ -9,7 +9,13 @@ from pytest_bdd import (
     then,
     when,
 )
+import pytest
 
+@pytest.fixture
+def admin():
+    """Admin fixture."""
+    auth = {'token':'some-awesome-apikey', 'env': 'test', 'user': 'admin'}
+    return auth
 
 @scenario('users.feature', 'Reclaim the users list')
 def test_reclaim_the_users_list():
@@ -18,9 +24,9 @@ def test_reclaim_the_users_list():
 
 
 @given('I have an environment')
-def i_have_an_environment():
+def i_have_an_environment(admin):
     """I have an environment."""
-    pass
+    assert admin['env'], 'test'
 
 
 @given('I\'m an authorized user')
