@@ -30,9 +30,10 @@ def i_have_an_environment(admin):
 
 
 @given('I\'m an authorized user')
-def im_an_authorized_user():
+def im_an_authorized_user(admin):
     """I'm an authorized user."""
-    pass
+    assert admin['token'], 'some-awesome-apikey'
+
 
 
 @when('I go to the users list page')
