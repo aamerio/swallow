@@ -7,6 +7,12 @@
 =============
 # swallow
 Python REST API exercise
-'''
+```
 run setup/prepare.sh 
-'''
+```
+
+
+### tests
+```
+python -m pytest tests/
+```

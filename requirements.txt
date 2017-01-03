@@ -1,2 +1,8 @@
+Flask
+flask-restplus
+pymongo
+Flask-PyMongo
 requests
-docker-py
+docker
+
+-r tests/requirements.txt
