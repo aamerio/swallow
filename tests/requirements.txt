@@ -5,5 +5,5 @@ swagger_spec_validator
 ## Optional packages
 # pytest-xdist
 # pytest-cov
-coverage
-codacy-coverage
+# coverage
+# codacy-coverage
