@@ -5,4 +5,3 @@ Flask-PyMongo==0.4.1
 requests==2.12.4
 docker==2.0.0
 
--r test_requirements.txt
