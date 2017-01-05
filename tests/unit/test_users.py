@@ -26,13 +26,13 @@ def test_reclaim_the_users_list():
 @given('I have an environment')
 def i_have_an_environment(admin):
     """I have an environment."""
-    assert admin['env'], 'test'
+    assert admin['env'] == 'test'
 
 
 @given('I\'m an authorized user')
 def im_an_authorized_user(admin):
     """I'm an authorized user."""
-    assert admin['token'], 'some-awesome-apikey'
+    assert admin['token'] == 'some-awesome-apikey'
 
 
 

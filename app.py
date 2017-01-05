@@ -16,8 +16,8 @@ CONFIG_NAME_MAPPER = {
 app = Flask(__name__)
 app.config.from_object(CONFIG_NAME_MAPPER['development'])
 
-#import modules
-#modules.init_app(app)
+# import modules
+# modules.init_app(app)
 
 
 if app.debug:
@@ -35,10 +35,10 @@ api = Api(app, version="app.config['VERSION']", title='Progress API',
          )
 parser = reqparse.RequestParser()
 
+
 @api.representation('application/javascript')
 def output_json(data, code, callback, headers=None):
     resp = make_response(callback + "(" + json.dumps(data) + ")", code)
     resp.headers.extend(headers or {"Content-Type": "application/javascript"})
     return resp
 
-    
