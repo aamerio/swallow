@@ -4,6 +4,6 @@ python:
 install: 
     - "pip install -r requirements.txt"
     - "pip install coveralls"	
-    - "pip install pytest-bdd"	      
+#    - "pip install pytest-bdd"	      
 script: 
     - py.test

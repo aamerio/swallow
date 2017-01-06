@@ -1,54 +1,50 @@
-# coding=utf-8
+# encoding: utf-8
 # pytest-bdd generate users.feature > test_users.py
+# http://pydigger.com/pypi/pytest-bdd
+"""User feature tests."""
 
-"""Users feature tests."""
-
-from pytest_bdd import (
-    given,
-    scenario,
-    then,
-    when,
-)
 import pytest
+from pytest_bdd import (scenario, given, when, then)
+
+from api.user import User
+
 
 @pytest.fixture
-def admin():
-    """Admin fixture."""
-    auth = {'token':'some-awesome-apikey', 'env': 'test', 'user': 'admin'}
-    return auth
+def user():
+    user = User({'token': 'some-awesome-apikey', 'env': 'test', 'user': 'admin'})
+    return user
 
-@scenario('users.feature', 'Reclaim the users list')
+
+@scenario('../../features/user.feature', 'Reclaim the user')
 def test_reclaim_the_users_list():
     """Reclaim the users list."""
     pass
 
 
-@given('I have an environment')
-def i_have_an_environment(admin):
+@given('The auth dict is valid')
+def test_auth_is_valid(user):
+    assert user.auth_is_valid() == True
+
+
+@given('The user has a token')
+def test_user_has_token(user):
     """I have an environment."""
-    assert admin['env'] == 'test'
+    assert user.auth['token'] != ''
 
 
-@given('I\'m an authorized user')
-def im_an_authorized_user(admin):
-    """I'm an authorized user."""
-    assert admin['token'] == 'some-awesome-apikey'
+@given('The user has an environment')
+def test_user_has_env(user):
+    """I have an environment."""
+    assert user.auth['env'] != ''
 
 
-
-@when('I go to the users list page')
-def i_go_to_the_users_list_page():
-    """I go to the users list page."""
-    pass
-
-
-@then('I should not see the error message')
-def i_should_not_see_the_error_message():
-    """I should not see the error message."""
-    pass
+@then('The list is pushed')
+def test_users_list_accessible(user):
+    """Return the list."""
+    assert user.users() != {}
 
 
-@then('the list is pushed')
-def the_list_is_pushed():
-    """the list is pushed."""
-
+@then('User details are pushed')
+def test_user_details_are_pushed(user):
+    """Return the list"""
+    assert user.info() != {}
