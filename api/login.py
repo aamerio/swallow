@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 
 class Login(object):
     def __init__(self, sso_registry):

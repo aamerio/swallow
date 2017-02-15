@@ -24,7 +24,7 @@ class DevelopmentConfig(BaseConfig):
     SWALLOW_SWAGGER_UI_DOC_EXPANSION = 'list'
     SWALLOW_VALIDATE = True
     SWALLOW_MASK_SWAGGER = False
-    SWALLOW_ERROR_404_HELP = False    
+    SWALLOW_ERROR_404_HELP = False
 
 class TestingConfig(BaseConfig):
     TESTING = True
