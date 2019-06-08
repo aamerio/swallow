@@ -1,0 +1,11 @@
+pytest==4.6.2
+pytest-bdd==3.1.0
+mock==3.0.5
+swagger_spec_validator==2.4.3
+selenium
+
+## Optional packages
+# pytest-xdist
+# pytest-cov
+# coverage
+# codacy-coverage

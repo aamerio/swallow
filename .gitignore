@@ -1,5 +1,8 @@
+# My ignore
+learn/
 # Byte-compiled / optimized / DLL files
 __pycache__/
+.cache
 *.py[cod]
 *$py.class
 
@@ -23,6 +26,7 @@ var/
 *.egg-info/
 .installed.cfg
 *.egg
+__pycache__
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -87,3 +91,6 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+# Vscode
+.vscode
