@@ -1,7 +1,7 @@
-Flask==1.0.3
-flask-restplus==0.12.1
-pymongo==3.8.0
-Flask-PyMongo==2.3.0
-requests==2.22.0
-docker==4.0.1
+Flask
+flask-restplus
+pymongo
+Flask-PyMongo
+requests
+docker
 
